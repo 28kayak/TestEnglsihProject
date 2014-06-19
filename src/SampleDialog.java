@@ -1,8 +1,15 @@
-import javax.swing.*;
-
 import java.awt.BorderLayout;
-import java.awt.event.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+
 public class SampleDialog extends JFrame implements ActionListener 
 {
 	JLabel ansLabel;
@@ -65,7 +72,7 @@ public class SampleDialog extends JFrame implements ActionListener
 			ansLabel.setText("Umm.....Try again!");
 		}
 		else 
-		{
+		{//dead code
 			ansLabel.setText("Bye Bye!");
 		}
 		
