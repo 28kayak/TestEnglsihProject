@@ -21,10 +21,9 @@ public class SampleDialog extends JFrame implements ActionListener
 		frame.setTitle("English!");
 		frame.setVisible(true);
 	}
-	
 	SampleDialog()
 	{
-		JButton infoButton = new JButton("button");
+		JButton infoButton = new JButton("Get a quiz!");
 		infoButton.addActionListener(this);
 		
 		JPanel p = new JPanel();
@@ -41,9 +40,9 @@ public class SampleDialog extends JFrame implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		String selectValues[] = {"in","out","to","onto"};
+		String selectValues[] = {"at","in","on","from"};
 		int select = JOptionPane.showOptionDialog(this, 
-				"which is Correct? \n choose one ans", //Message
+				"which is the correct prop to fill up (*)? \n I saw your father standing (*) the bus stop.", //Message
 				"Preposition",//title
 				JOptionPane.YES_NO_OPTION, //type of option
 				JOptionPane.QUESTION_MESSAGE,//msg type
@@ -59,7 +58,7 @@ public class SampleDialog extends JFrame implements ActionListener
 		{
 			ansLabel.setText("This is not correct answer try again");
 			
-		}else if(select == 2)
+		}else if(select == 0)
 		{
 			ansLabel.setText("correct answer is "+ selectValues[select] );
 		}
@@ -67,7 +66,7 @@ public class SampleDialog extends JFrame implements ActionListener
 		{
 			ansLabel.setText("Sorry wrong answer Try again");
 		}
-		else if(select == 0)
+		else if(select == 2)
 		{
 			ansLabel.setText("Umm.....Try again!");
 		}

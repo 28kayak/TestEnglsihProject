@@ -5,7 +5,7 @@ public class Problem
 	String correnctAns;
 	String[] choices = new String[4];
 	
-	public Problem(String q, String a)
+	public Problem(String q, String a, String[] choiceBox)
 	{
 		question = q;
 		correnctAns = a;	
